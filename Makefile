@@ -5,7 +5,6 @@ CC = gcc
 TARGET = test
 
 MAIN = test.c 
-# HEADERS = lab1_IO.h
 
 # Specify the object files that make up the target
 OBJECTS = test.o 
@@ -27,14 +26,3 @@ $(TARGET): $(OBJECTS)
 # Clean target
 clean:
 	rm -f $(TARGET) $(OBJECTS)
-
-run:
-	./$(TARGET)
-
-# zip command will remove executables and input/output data files then zip 
-# 	the contents according to the specified submission requirements
-# zip:
-# 	rm -rf $(OBJECTS) serialtester.o 
-# 	rm -rf $(TARGET) serialtester matrixgen
-# 	rm -rf data_input data_output
-# 	zip $(ARCHIVE_NAME).zip ../Code ../Members
